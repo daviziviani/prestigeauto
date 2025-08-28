@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Auto Care - Estética Automotiva de Luxo</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Black background */
+            color: #F9FAFB; /* text-gray-50 */
+        }
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 1)), url('https://i.imgur.com/EVmBO0T.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-color {
+            color: #CCA43B; /* Premium Gold color */
+        }
+        .bg-accent-color {
+            background-color: #CCA43B; /* Premium Gold color */
+        }
+        .border-accent-color {
+            border-color: #CCA43B; /* Premium Gold color */
+        }
+        .btn {
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #CCA43B;
+            color: #121212;
+        }
+        .btn-primary:hover {
+            background-color: #E0B852;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #CCA43B;
+            color: #CCA43B;
+        }
+        .btn-secondary:hover {
+            background-color: #CCA43B;
+            color: #121212;
+        }
+        .section-title {
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+        .service-card, .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover, .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(204, 164, 59, 0.1), 0 4px 6px -2px rgba(204, 164, 59, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-[#121212]/80 backdrop-blur-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl sm:text-2xl font-bold tracking-wider flex items-center gap-3">
+                <i data-lucide="car-front" class="w-7 h-7 accent-color"></i>
+                <span>PRESTIGE <span class="accent-color">AUTO</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="hover:text-[#CCA43B] transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-[#CCA43B] transition-colors">Serviços</a>
+                <a href="#galeria" class="hover:text-[#CCA43B] transition-colors">Galeria</a>
+                <a href="#contato" class="hover:text-[#CCA43B] transition-colors">Contato</a>
+            </nav>
+            <a href="#contato" class="hidden md:inline-block btn btn-secondary px-6 py-2 rounded-lg font-semibold">
+                Agendar Horário
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4">
+            <a href="#inicio" class="hover:text-[#CCA43B] transition-colors">Início</a>
+            <a href="#servicos" class="hover:text-[#CCA43B] transition-colors">Serviços</a>
+            <a href="#galeria" class="hover:text-[#CCA43B] transition-colors">Galeria</a>
+            <a href="#contato" class="hover:text-[#CCA43B] transition-colors">Contato</a>
+            <a href="#contato" class="w-full text-center mt-2 btn btn-primary px-6 py-2 rounded-lg font-semibold">
+                Agendar Horário
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-bg min-h-screen flex items-center pt-24">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-tight mb-4">
+                    A Arte de Cuidar <br> do seu <span class="accent-color">Automóvel</span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-8">
+                    Elevamos a estética automotiva a um novo patamar com tecnologia, precisão e uma paixão inigualável por detalhes.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#servicos" class="w-full sm:w-auto btn btn-primary px-8 py-3 rounded-lg font-bold text-lg">
+                        Nossos Serviços
+                    </a>
+                    <a href="#contato" class="w-full sm:w-auto btn btn-secondary px-8 py-3 rounded-lg font-bold text-lg">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="py-20 md:py-24 bg-[#121212]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="section-title text-3xl sm:text-4xl">Serviços de <span class="accent-color">Elite</span></h2>
+                    <p class="text-base sm:text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Oferecemos soluções completas para proteger, restaurar e valorizar o seu veículo.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-[#1E1E1E] p-8 rounded-xl border border-[#2d2d2d] text-center">
+                        <div class="inline-block p-4 bg-[#2d2d2d] rounded-full mb-6">
+                            <i data-lucide="gem" class="w-8 h-8 accent-color"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Vitrificação Cerâmica</h3>
+                        <p class="text-gray-400">Proteção de longa duração com brilho intenso e profundo, repelência à água e sujeira.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-[#1E1E1E] p-8 rounded-xl border border-[#2d2d2d] text-center">
+                        <div class="inline-block p-4 bg-[#2d2d2d] rounded-full mb-6">
+                            <i data-lucide="sparkles" class="w-8 h-8 accent-color"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Polimento Técnico</h3>
+                        <p class="text-gray-400">Correção de imperfeições da pintura, removendo riscos e hologramas para um acabamento espelhado.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-[#1E1E1E] p-8 rounded-xl border border-[#2d2d2d] text-center">
+                        <div class="inline-block p-4 bg-[#2d2d2d] rounded-full mb-6">
+                            <i data-lucide="shield" class="w-8 h-8 accent-color"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">PPF (Paint Protection Film)</h3>
+                        <p class="text-gray-400">Película de proteção ultra resistente contra riscos, batidas de pedra e agentes químicos.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="service-card bg-[#1E1E1E] p-8 rounded-xl border border-[#2d2d2d] text-center">
+                        <div class="inline-block p-4 bg-[#2d2d2d] rounded-full mb-6">
+                            <i data-lucide="spray-can" class="w-8 h-8 accent-color"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Higienização Interna</h3>
+                        <p class="text-gray-400">Limpeza detalhada e completa do interior, eliminando ácaros, bactérias e odores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeria" class="py-20 md:py-24 bg-[#181818]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="section-title text-3xl sm:text-4xl">Resultados que <span class="accent-color">Inspiram</span></h2>
+                    <p class="text-base sm:text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Veja a transformação em nosso portfólio de projetos concluídos.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="gallery-item rounded-lg overflow-hidden aspect-w-1 aspect-h-1">
+                        <img src="https://i.imgur.com/A0qZ5zP.jpeg" alt="Serviço de estética automotiva 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden aspect-w-1 aspect-h-1">
+                        <img src="https://i.imgur.com/YEZk3mv.jpeg" alt="Serviço de estética automotiva 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden aspect-w-1 aspect-h-1">
+                        <img src="https://i.imgur.com/hTAA8VI.jpeg" alt="Serviço de estética automotiva 3" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-20 md:py-24 bg-[#121212]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="section-title text-3xl sm:text-4xl">Agende uma <span class="accent-color">Avaliação</span></h2>
+                    <p class="text-base sm:text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Entre em contato e descubra o que podemos fazer pelo seu carro. Nossa equipe está pronta para atendê-lo.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 accent-color mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Endereço</h3>
+                                <p class="text-gray-400">Rua dos Apaixonados por Carros, 123<br>Bairro Premium, Cidade-SP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="phone" class="w-6 h-6 accent-color mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Telefone / WhatsApp</h3>
+                                <p class="text-gray-400">(11) 99999-8888</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="mail" class="w-6 h-6 accent-color mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-bold text-lg">Email</h3>
+                                <p class="text-gray-400">contato@prestigeauto.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Seu nome" class="w-full bg-[#1E1E1E] border border-[#2d2d2d] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#CCA43B] transition-all">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Seu melhor e-mail" class="w-full bg-[#1E1E1E] border border-[#2d2d2d] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#CCA43B] transition-all">
+                        </div>
+                        <div>
+                            <textarea placeholder="Qual serviço você tem interesse?" rows="4" class="w-full bg-[#1E1E1E] border border-[#2d2d2d] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#CCA43B] transition-all"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full btn btn-primary px-8 py-3 rounded-lg font-bold text-lg">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#121212] border-t border-[#2d2d2d]">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2024 Prestige Auto Care. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com paixão por detalhes.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
